@@ -6,6 +6,22 @@ kore_spectre/.flutter-plugins-dependencies
 
 # Python server (contém credenciais — manter fora do git)
 korespectre_api.py
+kore_spectre/korespectre_api.py
+
+# Arquivos sensíveis
+*.rdp
+
+# Firebase Admin SDK key (chave privada — NUNCA commitar)
+*firebase-adminsdk*.json
+*service-account*.json
+korespectre-firebase-adminsdk-fbsvc-fd6cc3b580.json
+google-services.json
+
+# Screenshots de debug
+kore_*.png
+
+# Claude Code
+.claude/
 __pycache__/
 *.pyc
 
