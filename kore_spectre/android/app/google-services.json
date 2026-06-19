@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "307488308337",
+    "project_id": "korespectre",
+    "storage_bucket": "korespectre.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:307488308337:android:334976e324208ae2ec6fd0",
+        "android_client_info": {
+          "package_name": "com.korecloud.spectre"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFQEoQtlgmLArimBTHrDWak_6xBvCYROE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

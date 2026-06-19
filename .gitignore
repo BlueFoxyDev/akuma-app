@@ -1,0 +1,14 @@
+# Build artifacts
+kore_spectre/build/
+kore_spectre/.dart_tool/
+kore_spectre/.flutter-plugins
+kore_spectre/.flutter-plugins-dependencies
+
+# Python server (contém credenciais — manter fora do git)
+korespectre_api.py
+__pycache__/
+*.pyc
+
+# Test scripts
+deploy_check.py
+test_pause.py
