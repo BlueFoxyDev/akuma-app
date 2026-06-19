@@ -23,20 +23,24 @@ jobs:
         working-directory: kore_spectre
         run: flutter create --platforms=ios .
 
-      - name: Copy GoogleService-Info.plist
-        run: cp kore_spectre/ios/Runner/GoogleService-Info.plist kore_spectre/ios/Runner/GoogleService-Info.plist || true
-
       - name: Install dependencies
         working-directory: kore_spectre
         run: flutter pub get
 
-      - name: Build IPA (sem assinatura — AltStore re-assina)
+      - name: Build iOS app (sem assinatura)
         working-directory: kore_spectre
-        run: flutter build ipa --no-codesign --release
+        run: flutter build ios --release --no-codesign
+
+      - name: Empacotar IPA para AltStore
+        run: |
+          mkdir -p Payload
+          cp -r kore_spectre/build/ios/iphoneos/Runner.app Payload/Runner.app
+          zip -r akuma.ipa Payload
+          echo "IPA criado: $(du -sh akuma.ipa)"
 
       - name: Upload IPA
         uses: actions/upload-artifact@v4
         with:
           name: akuma-ios
-          path: kore_spectre/build/ios/ipa/*.ipa
+          path: akuma.ipa
           retention-days: 30
