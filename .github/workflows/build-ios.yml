@@ -23,6 +23,9 @@ jobs:
         working-directory: kore_spectre
         run: flutter create --platforms=ios .
 
+      - name: Copy GoogleService-Info.plist
+        run: cp kore_spectre/ios/Runner/GoogleService-Info.plist kore_spectre/ios/Runner/GoogleService-Info.plist || true
+
       - name: Install dependencies
         working-directory: kore_spectre
         run: flutter pub get
