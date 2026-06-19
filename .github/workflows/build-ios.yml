@@ -1,0 +1,38 @@
+name: Build iOS IPA
+
+on:
+  push:
+    branches: [master]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.32.0'
+          channel: 'stable'
+
+      - name: Add iOS platform
+        working-directory: kore_spectre
+        run: flutter create --platforms=ios .
+
+      - name: Install dependencies
+        working-directory: kore_spectre
+        run: flutter pub get
+
+      - name: Build IPA (sem assinatura — AltStore re-assina)
+        working-directory: kore_spectre
+        run: flutter build ipa --no-codesign --release
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: akuma-ios
+          path: kore_spectre/build/ios/ipa/*.ipa
+          retention-days: 30
