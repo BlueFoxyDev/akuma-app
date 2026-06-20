@@ -10,6 +10,8 @@ class DefaultFirebaseOptions {
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
         return android;
+      case TargetPlatform.iOS:
+        return ios;
       default:
         throw UnsupportedError('Plataforma não suportada');
     }
@@ -21,5 +23,14 @@ class DefaultFirebaseOptions {
     messagingSenderId: '307488308337',
     projectId: 'korespectre',
     storageBucket: 'korespectre.firebasestorage.app',
+  );
+
+  static const FirebaseOptions ios = FirebaseOptions(
+    apiKey: 'AIzaSyAm6RIIaVIqeLMU8WZWUIBWQJ8OEukpaKE',
+    appId: '1:307488308337:ios:f138ec0e962f0906ec6fd0',
+    messagingSenderId: '307488308337',
+    projectId: 'korespectre',
+    storageBucket: 'korespectre.firebasestorage.app',
+    iosBundleId: 'com.korecloud.koreSpectre',
   );
 }
