@@ -4,7 +4,7 @@
   "apps": [
     {
       "name": "Akuma",
-      "bundleIdentifier": "com.korecloud.spectre",
+      "bundleIdentifier": "com.korecloud.koreSpectre",
       "developerName": "KoreCloud",
       "subtitle": "Monitor Uptime Kuma no iPhone",
       "localizedDescription": "Monitore seus servidores com Uptime Kuma diretamente no iPhone.",
