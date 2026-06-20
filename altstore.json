@@ -1,0 +1,26 @@
+{
+  "name": "Akuma",
+  "identifier": "com.korecloud.spectre.source",
+  "apps": [
+    {
+      "name": "Akuma",
+      "bundleIdentifier": "com.korecloud.spectre",
+      "developerName": "KoreCloud",
+      "subtitle": "Monitor Uptime Kuma no iPhone",
+      "localizedDescription": "Monitore seus servidores com Uptime Kuma diretamente no iPhone.",
+      "iconURL": "https://raw.githubusercontent.com/BlueFoxyDev/akuma-app/master/kore_spectre/assets/AkumaLogo.png",
+      "tintColor": "1A1A2E",
+      "screenshots": [],
+      "versions": [
+        {
+          "version": "1.0.0",
+          "date": "2026-06-19",
+          "localizedDescription": "Primeira versão iOS.",
+          "downloadURL": "https://github.com/BlueFoxyDev/akuma-app/releases/download/v1.0.0/akuma.ipa",
+          "size": 6305169
+        }
+      ]
+    }
+  ],
+  "news": []
+}
